@@ -1,13 +1,2 @@
-.myeclipse/
-.externalToolBuilders/
-build.xml
-build/
-dist/
-.settings/
-WebRoot/WEB-INF/classes/
-.classpath
-.mymetadata
-.myumldata
-.project
-*.class
-build/classes/
+
+/bin

@@ -1,5 +1,8 @@
 package test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.commons.lang.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +21,7 @@ public class GetClxxList {
 
 	@Test
 	public void testDosmsSend() {
-
+		/*
 		String methodName = "";
 		OnlineRequest req = new OnlineRequest();
 		//客户端标识
@@ -38,13 +41,25 @@ public class GetClxxList {
 		//MD5加密
 		String secret = "sun";
 		String authenticator = uid + apmac + times + secret ;
-		
+
 		String authenticatorMD5 = MD5Encrypt.getInstance().encrypt(authenticator);
 		authenticatorMD5 = StringUtils.upperCase(authenticatorMD5);
 		req.setAuth(authenticatorMD5);	
 
 		// 查询结果
 		String result = client.doPost(methodName, req);
+		// 控制台打印
+		System.out.println(result);
+	}
+
+		 */
+		String methodName = "clxxList";
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("beginTime", "2009-10-31 10:47:16");
+		map.put("endTime", "2010-8-16 16:14:14");
+
+		// 查询结果
+		String result = client.doPost2(methodName, map);
 		// 控制台打印
 		System.out.println(result);
 	}
